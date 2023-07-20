@@ -5,9 +5,9 @@ public class Principal {
     public static void main(String[] args) {
 
         // instanciando os elementos
-        Aluno a1 = new Aluno("Thiago Aguiar");
-        Aluno a2 = new Aluno("Filipe Augusto");
-        Aluno a3 = new Aluno("Jéssica Rânelli");
+        Aluno a1 = new Aluno("Thiago");
+        Aluno a2 = new Aluno("Filipe");
+        Aluno a3 = new Aluno("Jéssica");
 
         // instanciando um vetor de Aluno com 3 posições
         Aluno[] turmaA = new Aluno[3];
@@ -50,18 +50,19 @@ public class Principal {
         Object[] meuPerfilNovo = meuVetor.exclui(meuPerfil, 10);
         System.out.println(meuVetor.exibe(meuPerfilNovo));
 
-//        System.out.println(meuVetor.exibe(turmaA));
-//        Object[] minhaFicha = new Object[5];
-//        
-//        minhaFicha[0] = "Thiago";
-//        minhaFicha[1] = 37;
-//        minhaFicha[2] = false;
-//        minhaFicha[3] = 101.2f;
-//        minhaFicha[4] = turmaA;       
-//        
-//        for(Object atributo : minhaFicha){
-//            System.out.println(atributo);
-//        }
+        System.out.println("================================================");
+        
+        Object[] minhaFicha = new Object[5];
+        
+        minhaFicha[0] = "Thiago";
+        minhaFicha[1] = 37;
+        minhaFicha[2] = false;
+        minhaFicha[3] = 101.2f;
+        minhaFicha[4] = turmaA;       
+
+        for(Object atributo : minhaFicha){
+            System.out.println(atributo);
+        }
     }
 
 }

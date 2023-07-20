@@ -20,7 +20,7 @@ public class VetorCustomizado {
                 resultado += " | ";
             }
         }
-        
+
         return resultado;
     }
 
@@ -82,7 +82,8 @@ public class VetorCustomizado {
 
         for (Object e : vetor) {
             tamanho++;
-        }
+        } 
+        
         return tamanho;
     }
 }

@@ -25,6 +25,7 @@ public class VetorCustomizado {
 
     //TODO descrição
     public Object[] adiciona(Object[] vetor, Object elemento) {
+
         Object[] novoVetor = new Object[this.tamanho(vetor) + 1];
 
         for (int i = 0; i < this.tamanho(vetor); i++) {
@@ -34,6 +35,29 @@ public class VetorCustomizado {
         novoVetor[this.tamanho(novoVetor) - 1] = elemento;
 
         return novoVetor;
+
+    }
+
+    //TODO descrição
+    public Object[] adiciona(Object[] vetor, Object elemento, int posicao) {
+
+        if (posicao < 0 || posicao > this.tamanho(vetor)) {
+            return null;
+        } else {
+            Object[] novoVetor = new Object[this.tamanho(vetor) + 1];
+
+            for (int i = 0; i < posicao; i++) {
+                novoVetor[i] = vetor[i];
+            }
+
+            for (int i = posicao; i < this.tamanho(vetor); i++) {
+                novoVetor[i + 1] = vetor[i];
+            }
+
+            novoVetor[posicao] = elemento;
+
+            return novoVetor;
+        }
     }
 
     //TODO descrição
@@ -77,7 +101,7 @@ public class VetorCustomizado {
 
     //TODO descrição
     public Object localiza(Object[] vetor, int posicao) {
-        Object elemento = null;
+        Object elemento;
 
         if (posicao < 0 || posicao > this.tamanho(vetor)) {
             elemento = null;

@@ -12,11 +12,15 @@ public class VetorCustomizado {
 
         String resultado = "";
 
-        for (Object elemento : vetor) {
-            resultado += elemento;
-            resultado += " | ";
+        if (vetor == null) {
+            resultado = "ERRO - VETOR NULO";
+        } else {
+            for (Object elemento : vetor) {
+                resultado += elemento;
+                resultado += " | ";
+            }
         }
-
+        
         return resultado;
     }
 
@@ -39,14 +43,19 @@ public class VetorCustomizado {
         // criando um novo vetor com uma posição a menos do que o vetor original
         Object[] novoVetor = new Object[this.tamanho(vetorOriginal) - 1];
 
-        // transferindo os dados do vetor original para o novo vetor, exceto
-        // o dado na posição indicada para exclusão
-        int j = 0;
-        for (int i = 0; i < vetorOriginal.length; i++) {
+        // validando se a posição informada existe no vetor original
+        if (posicao < 0 || posicao > this.tamanho(vetorOriginal)) {
+            novoVetor = null;
+        } else {
+            // transferindo os dados do vetor original para o novo vetor, exceto
+            // o dado na posição indicada para exclusão
+            int j = 0;
+            for (int i = 0; i < vetorOriginal.length; i++) {
 
-            if (i != posicao) {
-                novoVetor[j] = vetorOriginal[i];
-                j++;
+                if (i != posicao) {
+                    novoVetor[j] = vetorOriginal[i];
+                    j++;
+                }
             }
         }
 

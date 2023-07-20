@@ -47,7 +47,7 @@ public class Principal {
 
         // testando o método de exclusão de uma posição do vetor
         // o retorno é um novo vetor sem a posição que foi excluída
-        Object[] meuPerfilNovo = meuVetor.exclui(meuPerfil, 1);
+        Object[] meuPerfilNovo = meuVetor.exclui(meuPerfil, 10);
         System.out.println(meuVetor.exibe(meuPerfilNovo));
 
 //        System.out.println(meuVetor.exibe(turmaA));

@@ -1,7 +1,6 @@
 package estruturadados_vetores;
 
-//Classe para prover métodos próprios para manipulação de arrays, exigindo para isso que o dado a ser manipulado
-//seja tipado no atributo aqui definido.
+//Classe para prover métodos próprios para manipulação de arrays
 //Não prevê métodos para manipulação individual do dado; foco no array (adicionar elemento, remover elemento, length, etc)
 //Essa classe é similar a ArrayList<T>, onde <T> seria uma classe Aluno (por ex), ficando VetorCustomizado<Aluno>, ou qualquer outra classe,
 //ficando VetorCustomizado(Object).
@@ -77,13 +76,26 @@ public class VetorCustomizado {
     }
 
     //TODO descrição
+    public Object localiza(Object[] vetor, int posicao) {
+        Object elemento = null;
+
+        if (posicao < 0 || posicao > this.tamanho(vetor)) {
+            elemento = null;
+        } else {
+            elemento = vetor[posicao];
+        }
+
+        return elemento;
+    }
+
+    //TODO descrição
     public int tamanho(Object[] vetor) {
         int tamanho = 0;
 
         for (Object e : vetor) {
             tamanho++;
-        } 
-        
+        }
+
         return tamanho;
     }
 

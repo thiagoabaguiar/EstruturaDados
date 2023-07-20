@@ -27,9 +27,13 @@ public class Principal {
         meuPerfil[2] = false;
         meuPerfil[3] = 101.3f;
 
-        // testando o método localiza do vetor customizado
+        // testando o método localiza do vetor customizado passando um elemento
         int posicao = meuVetor.localiza(meuPerfil, 101.3f);
-        System.out.println("Está na posição: " + posicao);
+        System.out.println("Valor solicitado está na posição: " + posicao);
+        
+        // testando o método localiza do vetor customizado passando uma posição
+        Object elemento = meuVetor.localiza(meuPerfil, 1);
+        System.out.println("Posição solicitada contém o valor: " + elemento);
 
         // testando o método tamanho do vetor customizado
         // atenção que todo vetor quando instanciado tem todas as suas posições

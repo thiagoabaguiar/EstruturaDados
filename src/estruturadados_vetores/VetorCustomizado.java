@@ -73,8 +73,7 @@ public class VetorCustomizado {
             // transferindo os dados do vetor original para o novo vetor, exceto
             // o dado na posição indicada para exclusão
             int j = 0;
-            for (int i = 0; i < vetorOriginal.length; i++) {
-
+            for (int i = 0; i < this.tamanho(vetorOriginal); i++) {
                 if (i != posicao) {
                     novoVetor[j] = vetorOriginal[i];
                     j++;
